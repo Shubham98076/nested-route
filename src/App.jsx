@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
 
 import Contact from "./component/Contact";
 import Products from "./component/Products";
@@ -15,19 +15,19 @@ const products = [
     id: 1,
     name: "Laptop",
     price: 1200,
-    image: "/image/laptop.png",
+    image: "./image/laptop.png",
   },
   {
     id: 2,
     name: "Keyboard",
     price: 100,
-    image: "/image/keyboard.png",
+    image: "./image/keyboard.png",
   },
   {
     id: 3,
     name: "Mouse",
     price: 200,
-    image: "/image/mouse.png",
+    image: "./image/mouse.png",
   },
 ];
 
@@ -39,7 +39,7 @@ function About() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <nav>
         <NavLink to="/">Home</NavLink>{" "}
         <NavLink to="/about">About</NavLink>{" "}
@@ -65,14 +65,12 @@ function App() {
           element={<ProductDetail list={products} />}
         />
 
-        <Route path="/dashboard" element={<Dashboard />} >
-
-        <Route path="profile" element={<Profile />} />
-
-        <Route path="settings" element={<Settings />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="profile" element={<Profile />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

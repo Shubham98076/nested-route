@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -6,8 +7,8 @@ function Dashboard() {
       <h2>Dashboard</h2>
 
       <nav>
-        <Link to="profile">Profile</Link>{" "}
-        <Link to="settings">Settings</Link>
+        <NavLink to="profile">Profile</NavLink>{" "}
+        <NavLink to="settings">Settings</NavLink>
       </nav>
 
       <Outlet />

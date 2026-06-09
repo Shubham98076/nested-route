@@ -15,19 +15,19 @@ const products = [
     id: 1,
     name: "Laptop",
     price: 1200,
-    image: "./image/laptop.png",
+    image: `${import.meta.env.BASE_URL}image/laptop.png`,
   },
   {
     id: 2,
     name: "Keyboard",
     price: 100,
-    image: "./image/keyboard.png",
+    image: `${import.meta.env.BASE_URL}image/keyboard.png`,
   },
   {
     id: 3,
     name: "Mouse",
     price: 200,
-    image: "./image/mouse.png",
+    image: `${import.meta.env.BASE_URL}image/mouse.png`,
   },
 ];
 
